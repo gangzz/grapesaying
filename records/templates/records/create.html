@@ -1,15 +1,131 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>葡萄说</title>
+		<meta name="author" content="yang" />
+		<!-- Date: 2014-04-13 -->
+		<link type="text/css" rel="stylesheet" href="/static/css/grapecustom.css" />
+		<script type="text/javascript" src="/static/js/trd/jquery-1.10.2.js" ></script>
+		<script type="text/javascript">
+			function initData()
+			{
+				$('.type-button:first').data('acts', {
+					value: 1,
+					values: [
+								{key: '30ml', value: '30'},
+								{key: '60ml', value: '60'},
+								{key: '90ml', value: '90'},
+								{key: '120ml', value: '120'},
+								
+							],
+				});
+				$('.type-button:last').data('acts', {
+					value: 2,
+					values: [
+								{key: '少', value: '1'},
+								{key: '一般', value: '2'},
+								{key: '多', value: '3'},
+								{key: '一大坨', value: '4'},
+								
+							],
+				});
+				
+			};
+			function initType()
+			{
+				$('.type-button').on({
+					click: function(event){
+						var elem = $(event.currentTarget);
+						var actions = elem.data('acts');
+						$("#type-input").val(actions['value']);
+						$("#values").find("div > a > h2").each(function(idx, val){
+							var entry = actions['values'][idx];
+							$(val).text(entry['key']).parent('a').data('value', entry['value']);
+						});
+						trigger(elem);
+						event.preventDefault();
+					},
+				});
+			};
+			function initVal()
+			{
+				$('.val-button').on({
+					click: function(event){
+						var elem = $(event.currentTarget);
+						var value = elem.children('a').data('value');
+						$("#value-input").val(value);
+						trigger(elem);
+						event.preventDefault();
+					},
+				});
+			};
+			function trigger(elem){
+				elem.siblings().each(function(idx, sibling){
+					$(sibling).removeClass('ui-active');
+				});
+				elem.addClass('ui-active');
+			};
+			function initSubmit(){
+				$("#submit").click(function(){
+					$("#data-form").submit();
+				});
+			}
+			$(initData);
+			$(initType);
+			$(initVal);
+			$(initSubmit);
+		</script>
 </head>
 <body>
-    <form action="../add/" method="post">
-        {% csrf_token %}
-        <label>userId:</label><input type="text" name="userId" value="1" readonly="true"><br>
-        <label>type:</label><input type="text" name="type"><br>
-        <label>value:</label><input type="text" name="value"><br>
-        <input type="submit"/>
-    </form>
+	<div class="content-container container ">
+			<div class="container full-panel half-vertical-panel">
+				<div class="type-button button-block red-bg half-panel full-vertical-panel left-float">
+					<a href="#" style="line-height: 400px">
+				        <h1>喝奶奶</h1>
+				    </a>
+				</div>
+				<div class="type-button button-block blue-bg half-panel full-vertical-panel left-float">
+					<a href="#" style="line-height: 400px">
+				        <h1>排便便</h1>
+				    </a>
+				</div>
+			</div>
+			<div class="full-panel half-vertical-panel">
+				<div id="values" class="container half-vertical-panel">
+					<div class="val-button button-block green-bg quarter-panel full-vertical-panel left-float">
+						<a  href="#" style="line-height: 200px">
+					        <h2>在等待</h2>
+					    </a>
+					</div>
+					<div class="val-button button-block yellow-bg quarter-panel full-vertical-panel left-float">
+						<a  href="#" style="line-height: 200px">
+					        <h2>在等待</h2>
+					    </a>
+					</div>
+					<div class="val-button button-block green-bg quarter-panel full-vertical-panel left-float">
+						<a  href="#" style="line-height: 200px">
+					        <h2>在等待</h2>
+					    </a>
+					</div>
+					<div class="val-button button-block yellow-bg quarter-panel full-vertical-panel left-float">
+						<a  href="#" style="line-height: 200px">
+					        <h2>在等待</h2>
+					    </a>
+					</div>
+				</div>
+				<div class="container half-vertical-panel center-align">
+			        <a href="#" id="submit"><h1>Do it!</h1></a>
+					<form id="data-form" action="../add/" method="post">
+				        {% csrf_token %}
+				        <input type="hidden" name="userId" value="1" readonly="readonly">
+				        <input type="hidden" id="type-input" name="type">
+				        <input type="hidden" id="value-input" name="value">
+				    </form>
+				</div>
+			</div>
+			
+		</div>
+    
 </body>
 </html>

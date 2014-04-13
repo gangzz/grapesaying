@@ -21,5 +21,9 @@ def add(request):
     return list(request)
 
 def list(request):
-    records = Record.objects.all();
+    records = Record.objects.all()
+    poop = {1: '少', 2: '一般', 3: '多', 4: '巨大'}
+    for record in records:
+        if record.type == 2:
+            record.value = poop[record.value];
     return render(request, 'records/list.html', {'records': records})
