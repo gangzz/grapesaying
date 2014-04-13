@@ -22,7 +22,7 @@ def add(request):
 
 def list(request):
     records = Record.objects.all()
-    poop = {1: '少', 2: '一般', 3: '多', 4: '巨大'}
+    poop = {1: 'little', 2: 'normal', 3: 'great', 4: 'large'}
     for record in records:
         if record.type == 2:
             record.value = poop[record.value];
