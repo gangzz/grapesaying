@@ -1,0 +1,162 @@
+/* reset */
+html, body, a, div, dt, dd, form, h1, h2, h3, h4, h5, h6, input, li, ol, p, span, strong, table, tr, td, th, ul {
+	margin: 0;
+	padding: 0;
+	outline-style: none;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+ul {
+	list-style: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* basic */
+body {
+	background-color: #f2f2f2;
+	color: #000000;
+	font-family: Verdana, Arial, Youyuan, '幼圆', Simhei, '黑体', '宋体', Simsun, 'San serif';
+	font-size: 12px;
+	height: 1150px;
+	width: 980px;
+}
+h1{
+	font-size: 48px;
+	font-weight: bold;
+}
+h2{
+	font-size: 24px;
+}
+h3{
+	font-size: 16px;
+	font-weight: normal;
+}
+.strong {
+	font-weight: bold;
+}
+/* generic */
+.container{
+	overflow: hidden;
+}
+.content-container {
+	height: 700px;
+	margin: 225px 200px 225px 200px;
+	width: 580px;
+}
+.button-block {
+	text-align: center;
+}
+.button-block a{
+	display: block;
+	height: 100%;
+	vertical-align: middle;
+}
+.left-float {
+	float: left;
+}
+.right-float{
+	float: right;
+}
+.full-panel{
+	width: 100%;
+}
+.half-panel{
+	width: 50%;
+}
+.full-vertical-panel {
+	height: 100%;
+}
+.half-vertical-panel {
+	height: 50%;
+}
+.quarter-panel{
+	width: 23%;
+	padding-left: 1%;
+	padding-right: 1%;
+}
+.three-quarter-panel{
+	width: 73%;
+}
+.auto-width-panel{
+	width: auto;
+}
+.center-align {
+	text-align: center;
+}
+.right-align {
+	text-align: right;
+}
+.top-padding {
+	padding-top: 40px;
+}
+.half-top-padding {
+	padding-top: 20px;
+}
+.bottom-padding {
+	padding-bottom: 40px;
+}
+.half-bottom-padding {
+	padding-bottom: 20px
+}
+.left-margin {
+	margin-left: 40px;
+}
+.right-margin {
+	margin-right: 40px;
+}
+.half-right-margin {
+	margin-right: 20px;
+}
+.bottom-border {
+	border-bottom: 2px solid #c5c1bf;
+}
+.dot-bottom-border {
+	border-bottom: 2px dotted #c5c1bf;
+}
+.top-border {
+	border-top: 2px solid #c5c1bf;
+}
+.dot-top-border {
+	border-top: 2px dotted #c5c1bf;
+}
+.gray-color {
+	color: #c5c1bf;
+}
+.white-color {
+	color: #FFFFFF;
+}
+.green-color {
+	color: #00a0a0;
+}
+.common-block {
+	display: inline-block;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.input-like-text {
+	border: none;
+	width: auto;
+}
+.red-bg {
+	background-color: red;
+}
+.blue-bg {
+	background-color: blue;
+}
+.green-bg {
+	background-color: green;
+}
+.yellow-bg {
+	background-color: yellow;
+}
+/* others */
+#submit {
+	display: block;
+	background-color: #00A0A0;
+	height: 50%;
+	width: 100%;
+}

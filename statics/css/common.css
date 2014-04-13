@@ -1,0 +1,223 @@
+
+/* reset */
+html, body, a, div, dt, dd, form, h1, h2, h3, h4, h5, h6, input, li, ol, p, span, strong, table, tr, td, th, ul {
+	margin: 0;
+	padding: 0;
+	outline-style: none;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+ul {
+	list-style: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* basic */
+body {
+	color: #000000;
+	font-family: Verdana, Arial, Youyuan, '幼圆', Simhei, '黑体', '宋体', Simsun, 'San serif';
+	font-size: 12px;
+	background-color: #f2f2f2;
+}
+h1{
+	font-size: 48px;
+	font-weight: bold;
+}
+h2{
+	font-size: 24px;
+}
+h3{
+	font-size: 16px;
+	font-weight: normal;
+}
+.strong {
+	font-weight: bold;
+}
+/* generic */
+.container{
+	overflow: hidden;
+}
+.center-fix{
+	margin: 0 auto 0 auto;
+	padding: 0 18px 0 18px;
+	width: 960px;
+	background-image: url(../images/bgPageBox.png);
+	background-repeat: repeat-y;
+}
+.left-float {
+	float: left;
+}
+.right-float{
+	float: right;
+}
+.full-panel{
+	width: 100%;
+}
+.half-panel{
+	width: 48%;
+}
+.quarter-panel{
+	width: 23%;
+	padding-left: 1%;
+	padding-right: 1%;
+}
+.three-quarter-panel{
+	width: 73%;
+}
+.auto-width-panel{
+	width: auto;
+}
+.center-align {
+	text-align: center;
+}
+.right-align {
+	text-align: right;
+}
+.top-padding {
+	padding-top: 40px;
+}
+.half-top-padding {
+	padding-top: 20px;
+}
+.bottom-padding {
+	padding-bottom: 40px;
+}
+.half-bottom-padding {
+	padding-bottom: 20px
+}
+.left-margin {
+	margin-left: 40px;
+}
+.right-margin {
+	margin-right: 40px;
+}
+.half-right-margin {
+	margin-right: 20px;
+}
+.bottom-border {
+	border-bottom: 2px solid #c5c1bf;
+}
+.dot-bottom-border {
+	border-bottom: 2px dotted #c5c1bf;
+}
+.top-border {
+	border-top: 2px solid #c5c1bf;
+}
+.dot-top-border {
+	border-top: 2px dotted #c5c1bf;
+}
+.gray-color {
+	color: #c5c1bf;
+}
+.white-color {
+	color: #FFFFFF;
+}
+.green-color {
+	color: #00a0a0;
+}
+.common-block {
+	display: inline-block;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.input-like-text {
+	border: none;
+	width: auto;
+}
+/* header */
+div#header {
+	margin-top: 12px;
+	padding: 0 18px 0 18px;
+	width: 960px;
+}
+form#srch {
+	font-size: 12px;
+	margin-top: 16px;
+}
+.srch-input {
+	height: 16px;
+	margin-right: 5px;
+	padding: 2px 25px 2px 0;
+	width: 160px;
+}
+.srch-btn {
+	background-image:  url(../images/spriteIcon.png);
+	background-position:  0px -46px;
+	border: none;
+	cursor: pointer;
+	height: 20px;
+	left: 185px;
+	position: relative;
+	top: 2px;
+	width: 25px;
+}
+div#header-menu {
+	
+	background-image: url(../images/spriteBgFixedHeight.png);
+	background-position: 732px -65px;
+	background-repeat: no-repeat;
+	height: 45px;
+	padding-right: 18px;
+	margin-left: 40px;
+	width: 920px;
+}
+div#head-menu-bg {
+	background-image: url(../images/spriteBgFixedHeight.png);
+	background-position: 0 -4px;
+	height: 100%;
+	width: 920px;
+	
+}
+ul#header-menu-ul {
+	background-color: #00A0A0;
+	display: block;
+	height: 32px;
+	padding: 0 0 0 20px;
+}
+ul#header-menu-ul li {
+	display: block;
+	float: left;
+	font-size: 14px;
+	padding: 0 10px 0 10px; 
+}
+ul#header-menu-ul li a {
+	height: 32px;
+	line-height: 32px;
+}
+
+.ui-menu .ui-menu {
+	background: rgba(255, 255, 255, 0.8);
+	margin-top: -3px;
+	position: absolute;
+}
+.ui-menu .ui-menu-item {
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+.ui-menu .ui-menu .ui-menu-item {
+	color: #808080;
+	clear: both;
+	float: none;
+}
+.ui-menu .ui-menu-item a {
+	padding: 2px .4em;
+	line-height: 1.5;
+}
+.ui-menu .ui-menu-item a.ui-state-focus,
+.ui-menu .ui-menu-item a.ui-state-active {
+	font-weight: normal;
+	margin: -1px;
+	text-decoration: underline;
+}
+/* content */
+
+/* footer */
+.footer-item {
+	margin: 5px 0 5px 80px;
+}
+
