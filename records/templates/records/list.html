@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>记录信息</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>序号</th>
+            <th>类型</th>
+            <th>数量</th>
+            <th>时间</th>
+        </tr>
+        {% for record in records %}
+        <tr>
+            <td>{{ record.id}}</td>
+            <td>{{ record.type}}</td>
+            <td>{{ record.value}}</td>
+            <td>{{ record.time}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <div>
+        <a href="../">首页</a>
+    </div>
+</body>
+</html>

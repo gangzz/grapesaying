@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <form action="/records/add/" method="post">
+        {% csrf_token %}
+        <label>userId:</label><input type="text" name="userId" value="1" readonly="true"><br>
+        <label>type:</label><input type="text" name="type"><br>
+        <label>value:</label><input type="text" name="value"><br>
+        <input type="submit"/>
+    </form>
+</body>
+</html>
